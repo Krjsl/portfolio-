@@ -417,38 +417,13 @@
 
     <div class="blog-toolbar">
       <input type="text" id="blog-search" class="blog-search" placeholder="Search posts by title or tag...">
-      <button class="btn-primary" id="blog-new-btn" type="button">+ New Post</button>
     </div>
 
     <div class="blog-grid" id="blog-grid"></div>
     <p class="blog-empty" id="blog-empty" style="display:none;"></p>
   </section>
 
-  <!-- BLOG: NEW / EDIT MODAL -->
-  <div class="modal-overlay" id="blog-modal-overlay">
-    <div class="modal-box">
-      <button class="modal-close" id="blog-modal-close" type="button">&times;</button>
-      <h3 class="modal-title" id="blog-modal-title">New Blog Post</h3>
-      <form id="blog-form">
-        <input type="hidden" id="blog-id">
-        <label for="blog-title-input">Title</label>
-        <input type="text" id="blog-title-input" required placeholder="e.g. Breaking Down a SQLi Vulnerability">
-
-        <label for="blog-tag-input">Category / Tag</label>
-        <input type="text" id="blog-tag-input" placeholder="e.g. Web Security">
-
-        <label for="blog-content-input">Content</label>
-        <textarea id="blog-content-input" rows="10" required placeholder="Write your blog post here... (separate paragraphs with a blank line)"></textarea>
-
-        <div class="modal-actions">
-          <button type="button" class="btn-ghost" id="blog-cancel-btn">Cancel</button>
-          <button type="submit" class="btn-primary">Publish Post</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- BLOG: VIEW POST MODAL -->
+  <!-- BLOG: VIEW POST MODAL (read-only) -->
   <div class="modal-overlay" id="blog-view-overlay">
     <div class="modal-box modal-box-large">
       <button class="modal-close" id="blog-view-close" type="button">&times;</button>
@@ -456,10 +431,6 @@
       <h3 class="modal-title" id="blog-view-title"></h3>
       <p class="blog-view-meta" id="blog-view-meta"></p>
       <div class="blog-view-content" id="blog-view-content"></div>
-      <div class="modal-actions">
-        <button class="btn-ghost" id="blog-edit-btn" type="button">Edit</button>
-        <button class="btn-ghost danger" id="blog-delete-btn" type="button">Delete</button>
-      </div>
     </div>
   </div>
 
